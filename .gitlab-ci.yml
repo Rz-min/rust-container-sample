@@ -1,6 +1,13 @@
+variables:
+  CI_PROJECT_DIR: ./
+  IMAGE_NAME: sample-app
+  TAG: demo1
+
+stages:
+  - docker
 
 build:
-  stage: build
+  stage: docker
   image:
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
